@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "binar",
+    "password": "keren",
+    "database": "c6t4_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "binar",
+    "password": "keren",
+    "database": "c6t4_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "binar",
+    "password": "keren",
+    "database": "c6t4_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
