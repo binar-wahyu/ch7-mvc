@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Articles | All</title>
+  </head>
+  <body>
+    <a href="/articles/create">Buat artikel baru</a>
+    <br />
+    <br />
+
+    <% articles.forEach(i => { %>
+    <div>
+      <h1><%= i.title %></h1>
+      <p><%= i.body %></p>
+      <a href="/articles/<%= i.id %>">Baca lebih lanjut!</a>
+    </div>
+    <% }) %>
+  </body>
+</html>
