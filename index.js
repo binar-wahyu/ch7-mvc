@@ -17,16 +17,6 @@ app.get("/articles", (req, res) => {
   });
 });
 
-app.get("/articles/:id", (req, res) => {
-  Article.findOne({
-    where: { id: req.params.id },
-  }).then((article) => {
-    // Karena hasil dari promise findOne adalah object,
-    // Maka bisa kita lempar langsung ke method render
-    res.render("articles/show", article.dataValues);
-  });
-});
-
 // GET /articles/create, menampilkan form create
 app.get("/articles/create", (req, res) => {
   res.render("articles/create");
@@ -39,6 +29,16 @@ app.post("/articles", (req, res) => {
     body: req.body.body,
   }).then((article) => {
     res.redirect("/articles");
+  });
+});
+
+app.get("/articles/:id", (req, res) => {
+  Article.findOne({
+    where: { id: req.params.id },
+  }).then((article) => {
+    // Karena hasil dari promise findOne adalah object,
+    // Maka bisa kita lempar langsung ke method render
+    res.render("articles/show", article.dataValues);
   });
 });
 
